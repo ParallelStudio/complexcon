@@ -1,0 +1,34 @@
+#N canvas 457 120 577 511 10;
+#X obj 378 280 ramped_toggle;
+#X floatatom 378 323 5 0 0 0 - - -, f 5;
+#X obj 109 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 59 159 stop;
+#X msg 224 180 archive;
+#X obj 59 260 elooper~, f 28;
+#X obj 224 142 r audio;
+#X obj 58 344 outlet~;
+#X obj 378 366 outlet;
+#X obj 453 215 r rest;
+#X obj 346 122 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12000 1;
+#X msg 109 215 500;
+#X text 135 214 overlap time;
+#X text 134 119 bang when audio loaded;
+#X obj 453 242 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 346 87 r ramp time;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 5 0;
+#X connect 2 0 11 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 2;
+#X connect 5 0 7 0;
+#X connect 6 0 4 0;
+#X connect 6 0 2 0;
+#X connect 9 0 14 0;
+#X connect 10 0 0 0;
+#X connect 11 0 5 1;
+#X connect 14 0 0 1;
+#X connect 15 0 10 0;

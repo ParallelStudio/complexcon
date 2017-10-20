@@ -1,0 +1,16 @@
+#N canvas 137 36 776 659 10;
+#X obj 279 20 inlet;
+#X obj 258 444 outlet;
+#X obj 26 22 table archive;
+#X obj 27 49 table totemamb;
+#X obj 28 76 table totemtrack;
+#X obj 28 105 table hgt;
+#X obj 28 131 table kamp;
+#X obj 29 162 table nyc;
+#X obj 28 190 table pharrel;
+#X obj 28 217 table pusha;
+#X obj 28 243 table y3;
+#X msg 347 27 list archive hgt kamp nyc pharrel pusha totemamb totemtrack
+y3;
+#X connect 0 0 11 0;
+#X connect 11 0 1 0;
